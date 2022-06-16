@@ -9,7 +9,7 @@ export default function UUID(length) {
     var ID = "";
     for (let i = 0; i <= length; i++) {
         var rand = Math.floor(Math.random() * chars.length);
-        ID += chars.substring(rand, rand + 1);
+        ID += chars.substring(rand, rand + 1) + "-" + chars.substring(rand, rand + 2) + "-" + chars.substring(rand, rand + 3);
     }
 
     return ID;
